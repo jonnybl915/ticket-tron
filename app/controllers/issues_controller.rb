@@ -4,8 +4,8 @@ class IssuesController < ApplicationController
   end
   def create
     Issue.create(
-             title: 'Title',
-             description: 'Desc'
+             title: params[:title],
+             description: params[:description]
     )
     redirect_to '/'
   end

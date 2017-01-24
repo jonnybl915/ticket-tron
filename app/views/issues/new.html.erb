@@ -34,7 +34,12 @@
       <% end %>
 
       <%= form_tag '/issues' do %>
-        <button>Create Issue</button>
+          <p>Title</p>
+                  <input type="text" placeholder="write title here..." name="title">
+          <p>Description</p>
+                  <input type="text" placeholder="description..." name="description">
+
+          <button>Create Issue</button>
       <% end %>
   </body>
 </html>
