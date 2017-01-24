@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>all issues</title>
+  <h2>Issue Central</h2>
+  <table>
+    <head>
+      <tr>
+        <th>Issue</th>
+        <th>Description</th>
+      </tr>
+    </head>
+    <tbody>
+    <% @issues.each do |issue| %>
+        <tr><%= issue.title%> </tr>
+
+    <% end %>
+    </tbody>
+  </table>
+
+
+  </ul>
+</head>
+</html>

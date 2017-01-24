@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   get '/issues/new' => 'issues#new'
 
   get '/' => 'issues#new'
+  # root 'issues#new' SAME as ^^
 
   post '/issues' => 'issues#create'
-  # root 'issues#new'
+  get '/issues' => 'issues#index'
+
+  get '/issues/:id' => 'issues#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
