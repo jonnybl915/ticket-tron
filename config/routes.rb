@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  get '/issues/new' => 'issues#new'
+
+  get '/' => 'issues#new'
+
+  post '/issues' => 'issues#create'
+  # root 'issues#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

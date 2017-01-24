@@ -1,0 +1,40 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" href="/assets/stylesheets/applications.css">
+  </head>
+
+  <body>
+          <div id="app-container">
+                <strong>
+                let us resolve our issues...
+                </strong>
+
+                <p>
+                  There are <%= Issue.count %> issues in the database
+                  There are <%= User.count %> users in the database
+                </p>
+
+                <% if current_user != nil %>
+
+                  <p>
+                    Hello, <%= current_user.email %> !
+                  </p>
+                  <a href="/users/edit">edit my profile</a>
+
+                  <%= form_tag '/users/sign_out', method: :delete do %>
+                    <button class="logout-button">Logout</button>
+                  <% end %>
+
+                <% else %>
+
+                    <p>you are not logged in!</p>
+                    <a href="/users/sign_in">please sign in</a>
+          </div>
+      <% end %>
+
+      <%= form_tag '/issues' do %>
+        <button>Create Issue</button>
+      <% end %>
+  </body>
+</html>
