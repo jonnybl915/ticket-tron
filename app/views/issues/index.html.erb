@@ -2,6 +2,8 @@
 <head>
   <title>all issues</title>
   <h2>Issue Central</h2>
+
+  <a href="/issues/new">Create an Issue</a>
   <table>
     <head>
       <tr>
@@ -11,8 +13,14 @@
     </head>
     <tbody>
     <% @issues.each do |issue| %>
-        <tr><%= issue.title%> </tr>
+      <tr>
+        <td>
+          <a href="/issues/<%= issue.id %>"> <%= issue.title%> </a>
+        </td>
+        <td><%= issue.description %> </td>
 
+
+      </tr>
     <% end %>
     </tbody>
   </table>
